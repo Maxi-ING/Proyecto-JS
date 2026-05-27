@@ -1,85 +1,140 @@
+.registro {
+
+  padding: 30px;
+}
+
 .registro h2 {
-  color: #1f4e79;
+
+  color: #3b5b7a;
+
+  font-size: 34px;
 }
 
 .descripcion {
-  color: #555;
+
+  color: #6b7280;
 }
 
 .formulario {
 
-  max-width: 520px;
+  max-width: 600px;
 
   display: flex;
+
   flex-direction: column;
 
-  gap: 10px;
+  gap: 12px;
 
-  margin-top: 20px;
+  margin-top: 24px;
+
+  background-color: #ffffff;
+
+  padding: 30px;
+
+  border-radius: 16px;
+
+  border: 1px solid #d9e2ec;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.05);
 }
 
 .formulario label {
-  font-weight: bold;
-  color: #333;
+
+  font-weight: 600;
+
+  color: #374151;
 }
 
 .formulario input {
 
-  padding: 10px;
+  padding: 14px;
 
-  border: 1px solid #bbb;
+  border: 1px solid #cbd5e1;
 
-  border-radius: 8px;
+  border-radius: 10px;
 
   font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.formulario input:focus {
+
+  outline: none;
+
+  border-color: #567a9e;
+
+  box-shadow:
+    0 0 0 3px rgba(86,122,158,0.15);
 }
 
 .botones {
+
   display: flex;
-  gap: 12px;
-  margin-top: 10px;
+
+  gap: 14px;
+
+  margin-top: 14px;
 }
 
 button {
 
-  background-color: #1f4e79;
+  background-color: #3b5b7a;
 
   color: white;
 
   border: none;
 
-  padding: 10px 18px;
+  padding: 12px 20px;
 
-  border-radius: 8px;
+  border-radius: 10px;
 
   cursor: pointer;
+
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #163a5a;
+
+  background-color: #567a9e;
+
+  transform: translateY(-2px);
 }
 
 .secundario {
-  background-color: #6c757d;
+
+  background-color: #6b7280;
 }
 
 .secundario:hover {
-  background-color: #545b62;
+
+  background-color: #4b5563;
 }
 
 .vista-previa {
 
-  margin-top: 25px;
+  margin-top: 28px;
 
-  padding: 18px;
+  padding: 22px;
 
-  border-radius: 12px;
+  border-radius: 16px;
 
-  border: 1px solid #d6e4f0;
+  background-color: #ffffff;
 
-  background-color: #f0f6fb;
+  border: 1px solid #d9e2ec;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.05);
 }
 
 .vista-previa h3 {
-  color: #1f4e79;
+
+  color: #3b5b7a;
 }

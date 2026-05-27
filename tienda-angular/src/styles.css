@@ -1,23 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 
   margin: 0;
 
   font-family:
-    Arial,
-    Helvetica,
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
     sans-serif;
 
-  background-color: #f4f6f8;
+  background-color: #f5f7fa;
 
-  color: #222;
+  color: #2d3748;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin-top: 0;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+button,
+input {
+  font-family: inherit;
 }
