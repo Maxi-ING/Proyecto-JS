@@ -9,45 +9,41 @@
 
   <div class="grid-productos">
 
-    @for (producto of productos; track producto.nombre) {
+    <div class="card-producto" *ngFor="let producto of productos">
 
-      <div class="card-producto">
+      <h3>
+        {{ producto.nombre | uppercase }}
+      </h3>
 
-        <h3>
-          {{ producto.nombre | uppercase }}
-        </h3>
+      <p>
+        <strong>Categoría:</strong>
+        {{ producto.categoria }}
+      </p>
 
-        <p>
-          <strong>Categoría:</strong>
-          {{ producto.categoria }}
-        </p>
+      <p>
+        <strong>Precio:</strong>
 
-        <p>
-          <strong>Precio:</strong>
+        {{
+          producto.precio
+          | currency:'PEN':'symbol':'1.2-2'
+        }}
+      </p>
 
-          {{
-            producto.precio
-            | currency:'PEN':'symbol':'1.2-2'
-          }}
-        </p>
+      <p>
+        <strong>Fecha:</strong>
 
-        <p>
-          <strong>Fecha:</strong>
+        {{
+          producto.fechaRegistro
+          | date:'dd/MM/yyyy'
+        }}
+      </p>
 
-          {{
-            producto.fechaRegistro
-            | date:'dd/MM/yyyy'
-          }}
-        </p>
+      <p>
+        <strong>Stock:</strong>
+        {{ producto.stock }}
+      </p>
 
-        <p>
-          <strong>Stock:</strong>
-          {{ producto.stock }}
-        </p>
-
-      </div>
-
-    }
+    </div>
 
   </div>
 

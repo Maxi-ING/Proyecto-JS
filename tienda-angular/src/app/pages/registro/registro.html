@@ -77,9 +77,7 @@
 
   </form>
 
-  @if (productoRegistrado) {
-
-    <div class="vista-previa">
+  <div *ngIf="productoRegistrado" class="vista-previa">
 
       <h3>
         Vista previa del producto
@@ -110,7 +108,5 @@
       </p>
 
     </div>
-
-  }
 
 </section>

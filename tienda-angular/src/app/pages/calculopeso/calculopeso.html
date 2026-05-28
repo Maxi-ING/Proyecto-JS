@@ -1,0 +1,38 @@
+<div class="pagina-contenedor">
+  <section class="contenedor">
+    <h1>Cálculo de IMC</h1>
+
+    <div class="formulario">
+      <label>Nombre</label>
+      <input type="text" [(ngModel)]="nombre" placeholder="Tu nombre">
+
+      <label>Correo Electrónico</label>
+      <input type="email" [(ngModel)]="correo" placeholder="ejemplo@correo.com">
+      <span class="error-texto" *ngIf="errorCorreo">Por favor, ingresa un formato de correo válido.</span>
+
+      <label>Peso (kg)</label>
+      <input type="number" [(ngModel)]="peso" min="10" max="300" placeholder="Ej: 70">
+
+      <label>Altura (cm)</label>
+      <input type="number" [(ngModel)]="altura" min="50" max="250" placeholder="Ej: 175">
+
+      <button (click)="calcularIMC()">Calcular IMC</button>
+
+      <span class="error-texto" *ngIf="errorPeso">{{ errorMensaje }}</span>
+      <span class="error-texto" *ngIf="errorAltura">{{ errorMensaje }}</span>
+      <span class="error-texto" *ngIf="errorCorreo">Por favor, ingresa un formato de correo válido.</span>
+      <span class="error-texto" *ngIf="errorMensaje && !errorPeso && !errorAltura">{{ errorMensaje }}</span>
+    </div>
+
+    <!-- Resultados -->
+    <div class="resultado" *ngIf="imc !== null">
+      <h2>Resultado para {{ nombre }}</h2>
+      <p><strong>Tu IMC es:</strong> {{ imc | number:'1.1-1' }}</p>
+      <p><strong>Categoría:</strong> 
+        <span class="badge" [ngClass]="resultadoImc.toLowerCase().replace(' ', '-')">
+          {{ resultadoImc }}
+        </span>
+      </p>
+    </div>
+  </section>
+</div>

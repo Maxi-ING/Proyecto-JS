@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-registro',
+  standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './registro.html',
   styleUrl: './registro.css'
@@ -27,7 +28,7 @@ export class Registro {
     this.categoria = '';
     this.precio = 0;
     this.stock = 0;
-
+    
     this.productoRegistrado = false;
   }
 
